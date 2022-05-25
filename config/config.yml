@@ -1,5 +1,0 @@
-hosts:
-  -
-    name: Google
-    host: google.com
-    port: 

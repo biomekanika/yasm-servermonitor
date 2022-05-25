@@ -4,15 +4,53 @@ Yet Another Server Monitor. A simple server monitoring tool built on the Flask w
 ![image](https://user-images.githubusercontent.com/1324254/170273975-fa0c632b-c8e3-4733-97a9-657a412fab67.png)
 
 ## Introduction
-This project does not claim to be a full-featured application or server monitoring tool. There are far more feature-rich solutions out there. Instead, this is more of personal excercise in Python and Flask application development.
+This project does not claim to be a full-featured application or server monitoring solution. There are far more feature-rich tools out there. But instead, this is just a personal excercise in Python and Flask application development. (And I wanted something quick and dirty to check my home lab servers from a small screen or phone.)
 
-If you find the project useful, feel free to use it and maybe even help to improve it. :)
+> If you find this project useful, feel free to use it (under MIT license) and maybe even help to improve it by giving me feedback or contributing code. Thanks! :)
 
-## Getting Started (WIP)
-1. Folder Structure
+### How It Works
+YASM Server Monitor relies primarily on sending ICMP Ping requests to check for host availability. As such, target hosts that specifically block ping requests will show as unreachable.
+
+> NOTE: I am looking for more robust means of checking for availability without having to resort to using a custom server solutions that is installed on the target host (like Zabbix for example), but we shall see.
+
+## Getting Started
+1. Folder Structure (WIP)
+
 2. Installation process
+    
+    Before running the application, edit the ```config.yml``` file located in ```./config/``` of the root of the project directory to add target hosts. These can be host names or IP addresses:
+
+    ```
+    hosts:
+        -
+            name: Google
+            host: google.com
+            port: 
+        -
+            name: Home Router
+            host: 192.168.1.1
+            port:
+    ```
+    > As of writing, the ```port``` is an unsued attribute and may be left blank.
+
+    To run the application, simply execute as you would a regular Flash application:
+
+    ```$ flask run```   
+
 3. Software dependencies
+
+    YASM Server Monitor was built using the following:
+    - Python 3.9.2
+    - Flask 2.1.2
+    - PyYAML 5.4.1
+    
 4. Latest releases
-5. API references
+
+    Version 1.0.0
+    - Initial release
+
+5. API References (WIP)
 
 ## Build and Test (WIP)
+
+> NOTE: I am currently testing a Docker image build and will publish it as soon as I think it is ready.

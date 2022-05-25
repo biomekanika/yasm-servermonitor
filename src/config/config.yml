@@ -1,0 +1,13 @@
+hosts:
+  -
+    name: Google
+    host: google.com
+    port: 
+  -
+    name: Home Router
+    host: 192.168.1.1
+    port:
+  -
+    name: Home Server
+    host: 192.168.1.200
+    port:
