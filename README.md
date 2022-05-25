@@ -6,7 +6,7 @@ Yet Another Server Monitor. A simple server monitoring tool built on the Flask w
 ## Introduction
 This project does not claim to be a full-featured application or server monitoring solution. There are far more feature-rich tools out there. But instead, this is just a personal excercise in Python and Flask application development. (And I wanted something quick and dirty to check my home lab servers from a small screen or phone.)
 
-> If you find this project useful, feel free to use it (under MIT license) and maybe even help to improve it by giving me feedback or contributing code. Thanks! :)
+> NOTE: If you find this project useful, feel free to use it (under [MIT license](https://github.com/biomekanika/yasm-servermonitor/blob/master/LICENSE)) and maybe even help to improve it by giving me feedback or contributing code. Thanks! :)
 
 ### How It Works
 YASM Server Monitor relies primarily on sending ICMP Ping requests to check for host availability. As such, target hosts that specifically block ping requests will show as unreachable.
@@ -31,15 +31,17 @@ YASM Server Monitor relies primarily on sending ICMP Ping requests to check for 
             host: 192.168.1.1
             port:
     ```
-    > As of writing, the ```port``` is an unsued attribute and may be left blank.
+    > NOTE: As of writing, the ```port``` is an unsued attribute and may be left blank.
 
-    To run the application, simply execute as you would a regular Flash application:
+    To run the application, simply execute as you would a regular Flask application:
 
-    ```$ flask run```   
+    ```$ flask run```
+
+    The web app will run on default port 80.
 
 3. Software dependencies
 
-    YASM Server Monitor was built using the following:
+    YASM Server Monitor was built on a Debian 11 box using the following:
     - Python 3.9.2
     - Flask 2.1.2
     - PyYAML 5.4.1
@@ -52,5 +54,4 @@ YASM Server Monitor relies primarily on sending ICMP Ping requests to check for 
 5. API References (WIP)
 
 ## Build and Test (WIP)
-
-> NOTE: I am currently testing a Docker image build and will publish it as soon as I think it is ready.
+> NOTE: I am currently testing a Docker image build and will publish it as soon as it is ready.
