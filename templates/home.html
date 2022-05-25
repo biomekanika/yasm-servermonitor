@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Server Monitor v1.0</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="text-primary">
+        Server Monitor
+    </h1>
+    <hr>
+    {% for host in hosts %}
+        {% if 0 == host['code'] %}
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+        {% else %}
+        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        {% endif %}        
+            <div class="card-header">{{host['text']}}</div>
+            <div class="card-body">
+                <h5 class="card-title">{{host['host']}}</h5>
+                <p class="card-text">{{host['name']}}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+    <!-- Bootstrap Javascripts -->
+    <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
