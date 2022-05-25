@@ -1,6 +1,8 @@
 # yasm-servermonitor
 Yet Another Server Monitor. A simple server monitoring tool built on the Flask web application framework.
 
+![image](https://user-images.githubusercontent.com/1324254/170273975-fa0c632b-c8e3-4733-97a9-657a412fab67.png)
+
 ## Introduction
 This project does not claim to be a full-featured application or server monitoring tool. There are far more feature-rich solutions out there. Instead, this is more of personal excercise in Python and Flask application development.
 
