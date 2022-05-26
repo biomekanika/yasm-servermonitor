@@ -53,5 +53,12 @@ YASM Server Monitor relies primarily on sending ICMP Ping requests to check for 
 
 5. API References (WIP)
 
-## Build and Test (WIP)
-> NOTE: I am currently testing a Docker image build and will publish it as soon as it is ready.
+## Building Docker Image
+Navigate to the root directory where ```Dockerfile``` is located and execute a Docker build command:
+```
+docker build -t yasm-servermonitor .
+```
+To deploy the image (defaults to port 80):
+```
+docker run -d -p 80:80 yasm-servermonitor
+```
