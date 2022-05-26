@@ -9,23 +9,31 @@
 </head>
 
 <body>
-    <h1 class="text-primary">
-        Server Monitor
-    </h1>
-    <hr>
-    {% for host in hosts %}
-        {% if 0 == host['code'] %}
-        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-        {% else %}
-        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-        {% endif %}        
-            <div class="card-header">{{host['text']}}</div>
-            <div class="card-body">
-                <h5 class="card-title">{{host['host']}}</h5>
-                <p class="card-text">{{host['name']}}</p>
+    <div class="container-fluid">
+        <h1 class="text-primary">
+            Server Monitor
+        </h1>
+        <hr>
+        <div class="row">
+        {% for host in hosts %}
+            <div class="col-md-4 col-lg-3">
+            {% if 0 == host['code'] %}
+            
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                {% else %}
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                {% endif %}        
+                    <div class="card-header">{{host['text']}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{host['host']}}</h5>
+                        <p class="card-text">{{host['name']}}</p>
+                    </div>
+                </div>
             </div>
+        {% endfor %}
         </div>
-    {% endfor %}
+
+    </div>
 
     <!-- Bootstrap Javascripts -->
     <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
